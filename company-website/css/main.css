@@ -273,7 +273,7 @@ header {
 /* 🌌 Services Section */
 .services {
     min-height: 100vh;
-    background: url('../assets/images/services-bg.jpg') no-repeat center center / cover;
+    background: url('../assets/images/service-bg.png') no-repeat center center / cover;
     position: relative;
     padding: 5rem 2rem;
     display: flex;
@@ -352,7 +352,7 @@ header {
 .card p {
     font-size: 1rem;
     line-height: 1.6;
-    color: #e0e0e0;
+    color: #6d3030;
 }
 
 /* ✨ Hover Effects */
