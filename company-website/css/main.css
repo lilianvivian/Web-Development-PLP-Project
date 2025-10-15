@@ -309,6 +309,7 @@ header {
     letter-spacing: 1px;
     margin-bottom: 1rem;
     background: linear-gradient(90deg, #9a8cff, #7f7bff, #9f9fff);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
