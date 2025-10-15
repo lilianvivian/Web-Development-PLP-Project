@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LiSkyBot</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/logos/logo.png" alt="LilySkyBot Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Get in Touch with LiSkyBot</h2>
+            <p>Talk to us via phone, email, or submit your request below!</p>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <p><strong>Phone:</strong> +254 768 951 560</p>
+                <p><strong>Email:</strong> info@liskybot.com</p>
+            </div>
+
+            <!-- Contact Form -->
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                
+                <select name="service" required>
+                    <option value="">Select Service Category</option>
+                    <option value="web">Web Development</option>
+                    <option value="ai">AI Solutions</option>
+                    <option value="mobile">Mobile Apps</option>
+                </select>
+                
+                <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <!-- Success Popup -->
+<div id="success-popup" class="popup">
+    <div class="popup-content">
+        <h3>✅ Message Sent!</h3>
+        <p>Thanks for contacting <strong>LiSkyBot</strong>. We'll get back to you soon.</p>
+        <button id="close-popup">OK</button>
+    </div>
+</div>
+
+</body>
+</html>

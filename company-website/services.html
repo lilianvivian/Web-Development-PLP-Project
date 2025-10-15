@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - LiSkyBot</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/logos/logo.png" alt="LilySkyBot Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="active dropbtn">Services</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#web">Web Development</a></li>
+                        <li><a href="#ai">AI Solutions</a></li>
+                        <li><a href="#mobile">Mobile Apps</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Our Services</h2>
+            <p class="subtitle" data-aos="fade-up" data-aos-delay="100">
+                We bring together creativity and technology to build impactful solutions.
+            </p>
+            
+            <div class="service-cards">
+                <div class="card" id="web" data-aos="zoom-in" data-aos-delay="150">
+                    <h3>Web Development</h3>
+                    <p>We create visually stunning, mobile-friendly websites optimized for performance and scalability.</p>
+                </div>
+
+                <div class="card" id="ai" data-aos="zoom-in" data-aos-delay="250">
+                    <h3>AI Solutions</h3>
+                    <p>Harness the power of AI and machine learning to automate processes and enhance decision-making.</p>
+                </div>
+
+                <div class="card" id="mobile" data-aos="zoom-in" data-aos-delay="350">
+                    <h3>Mobile Apps</h3>
+                    <p>Build elegant and high-performing mobile applications for Android and iOS with smooth user experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 LiSkyBot. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>

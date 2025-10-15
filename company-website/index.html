@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Company</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/logos/logo.png" alt="Company Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">Services</a>
+                    <ul class="dropdown-content">
+                        <li><a href="services.html#web">Web Development</a></li>
+                        <li><a href="services.html#ai">AI Solutions</a></li>
+                        <li><a href="services.html#mobile">Mobile Apps</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to LiSkyBot Company</h1>
+            <p>Innovative Solutions for Your Business</p>
+            <a href="contact.html" class="cta-btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-info">
+      <h3>LiSkyBot</h3>
+      <p>Innovating software for a Smarter Tomorrow.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-socials">
+      <h4>Follow Us</h4>
+      <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+      <a href="#"><img src="assets/icons/github.svg" alt="GitHub"></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 LiSkyBot. All Rights Reserved.</p>
+  </div>
+</footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Animation speed
+    once: true      // Animate only once per scroll
+  });
+</script>
+
+</body>
+</html>
