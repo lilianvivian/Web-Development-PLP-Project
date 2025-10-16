@@ -1,13 +1,13 @@
-# 🌤️ LilySkyBot — Company Website Documentation
+# 🌤️ LiSkyBot — Company Website Documentation
 
 ## Overview
-**LilySkyBot** is a professional, multipage website for a tech company specializing in web solutions, AI-powered systems, and digital services.  
+**LiSkyBot** is a professional, multipage website for a tech company specializing in web solutions, AI-powered systems, and digital services.  
 This documentation outlines the project structure, features, technologies, and deployment instructions.
 
 ---
 
 ## 🏗️ Project Structure
-lilyskybot/
+liskybot/
 ├── index.html # Home page
 ├── about.html # About the company
 ├── services.html # Services offered
@@ -21,7 +21,7 @@ lilyskybot/
 ├── assets/
 │ ├── images/ # Images for the website
 │ ├── logos/ # Logos
-│ └── fonts/ # Custom fonts
+│ └── icons/ 
 └── README.md # Project documentation
 
 
@@ -55,7 +55,7 @@ lilyskybot/
    - **Publish directory:** `.` (root)
 5. Click **Deploy site**.
 6. Your site will be live at a Netlify-generated URL, e.g.,
- https://liskybot.netlify.app
+ https://liskybot-company.netlify.app
 
 
 ```
