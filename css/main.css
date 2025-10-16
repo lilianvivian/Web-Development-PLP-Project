@@ -85,6 +85,16 @@ header {
 .hero .cta-btn:hover {
     background-color: #a00000;
 }
+.hero h1 {
+    font-size: 3rem; /* adjust as needed */
+    font-weight: 700;
+}
+@media(max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem; /* responsive */
+    }
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -147,8 +157,13 @@ header {
     }
 }
     .hamburger {
-        display: flex;
+        display: none;
     }
+    @media(max-width: 768px) {
+    .hamburger {
+        display: flex; /* show on mobile */
+    }
+}
         
 
     /* When the hamburger is active (clicked) */
@@ -170,7 +185,6 @@ header {
     .hamburger span {
         transition: all 0.3s ease;
     }
-
 
 
 .team-grid {
@@ -218,6 +232,10 @@ header {
     padding: 0.7rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+.contact p,
+.contact h2 {
+    color: #111; /* darker text for readability */
 }
 /* About Section */
 .about {
@@ -273,14 +291,14 @@ header {
 /* 🌌 Services Section */
 .services {
     min-height: 100vh;
-    background: url('../assets/images/service-bg.png') no-repeat center center / cover;
+    background: url('../assets/images/services-bg.png') no-repeat center center / cover;
     position: relative;
     padding: 5rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #342393;
     text-align: center;
     overflow: hidden;
 }
@@ -331,7 +349,7 @@ header {
 
 /* Glassmorphism Cards */
 .card {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(92, 6, 6, 0.12);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 2.2rem 1.5rem;
@@ -345,21 +363,21 @@ header {
 .card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #f0f0ff;
+    color: #0c0a0a;
 }
 
 /* Paragraph text */
 .card p {
     font-size: 1rem;
     line-height: 1.6;
-    color: #6d3030;
+    color: #2f2626;
 }
 
 /* ✨ Hover Effects */
 .card:hover {
     transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 8px 25px rgba(255,255,255,0.2);
-    border-color: rgba(255,255,255,0.4);
+    box-shadow: 0 8px 25px rgba(219, 210, 210, 0.2);
+    border-color: rgba(230, 13, 13, 0.4);
 }
 
 /* Responsive Design */
@@ -381,6 +399,21 @@ header {
         padding: 1.8rem;
     }
 }
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1; /* main content pushes footer down */
+}
+
 
 
 /* Projects Section */
@@ -668,12 +701,14 @@ footer {
 .footer-links a:hover {
     color: #800000;
 }
-.footer-socials img {
-    width: 22px;
+.footer-socials i {
+    font-size: 1.2rem;
+    color: #ddd;
     margin-right: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, color 0.3s;
 }
-.footer-socials img:hover {
+.footer-socials i:hover {
+    color: #800000;
     transform: scale(1.2);
 }
 .footer-bottom {
