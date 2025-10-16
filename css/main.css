@@ -419,7 +419,7 @@ body, html {
 /* Projects Section */
 .projects {
     min-height: 90vh;
-    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    background: linear-gradient(to right, #202080, #e09191);
     padding: 4rem 2rem;
     text-align: center;
     color: #333;
@@ -451,7 +451,7 @@ body, html {
 
 /* Individual Card */
 .project-card {
-    background-color: #fff;
+    background-color: #beb5b5;
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -479,16 +479,16 @@ body, html {
 /* Hover Animation */
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 25px rgba(120, 16, 16, 0.2);
 }
 
 /* Team Section */
 .team {
     min-height: 90vh;
-    background: linear-gradient(to right, #89f7fe, #66a6ff);
+    background: linear-gradient(to right, #202080, #e09191);
     padding: 4rem 2rem;
     text-align: center;
-    color: #fff;
+    color: #201313;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -512,7 +512,7 @@ body, html {
 }
 
 .team-card {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(121, 12, 12, 0.15);
     backdrop-filter: blur(6px);
     border-radius: 12px;
     padding: 1.5rem;
@@ -539,13 +539,13 @@ body, html {
 /* Hover Effect */
 .team-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 25px rgba(87, 16, 16, 0.2);
 }
 
 /* Contact Section */
 .contact {
     min-height: 90vh;
-    background: linear-gradient(to right, #fbc2eb, #a18cd1);
+    background: linear-gradient(to right, #2b197f, #ac6b6b);
     padding: 4rem 2rem;
     text-align: center;
     color: #fff;
@@ -597,7 +597,7 @@ body, html {
     border-radius: 8px;
     border: none;
     background-color: #fff;
-    color: #333;
+    color: #741212;
     font-weight: 700;
     cursor: pointer;
     transition: background 0.3s;
