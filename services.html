@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - LiSkyBot</title>
+    <title>Our Services - LiSkyBot</title>
+    <meta name="description" content="Explore our expert services in AI & Automation, Custom Web Development, and Mobile App Creation to elevate your business.">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/logos/logo.png">
 </head>
 <body>
-    <div class="page-wrapper">
-        <div class="content">
-    <!-- Navbar -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="assets/logos/logo.png" alt="LilySkyBot Logo">
+                <img src="assets/logos/logo.png" alt="LiSkyBot Logo">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -42,40 +41,112 @@
         </nav>
     </header>
 
-    <!-- Services Section -->
-    <section class="services-section">
-        <div class="container">
-            <h2 data-aos="fade-up">Our Services</h2>
-            <p class="subtitle" data-aos="fade-up" data-aos-delay="100">
-                We bring together creativity and technology to build impactful solutions.
-            </p>
-            
-            <div class="service-cards">
-                <div class="card" id="web" data-aos="zoom-in" data-aos-delay="150">
-                    <h3>Web Development</h3>
-                    <p>We create visually stunning, mobile-friendly websites optimized for performance and scalability.</p>
-                </div>
+    <main>
+        <section class="page-header" data-aos="fade-in">
+            <div class="container">
+                <h1>Our Services</h1>
+                <p>We build powerful, tailored solutions to solve your most complex challenges.</p>
+            </div>
+        </section>
 
-                <div class="card" id="ai" data-aos="zoom-in" data-aos-delay="250">
-                    <h3>AI Solutions</h3>
-                    <p>Harness the power of AI and machine learning to automate processes and enhance decision-making.</p>
+        <section id="ai" class="service-detail" data-aos="fade-up">
+            <div class="container service-detail-grid">
+                <div class="service-text">
+                    <h2>AI & Automation Solutions</h2>
+                    <p class="service-subtitle">Streamline your operations, reduce costs, and unlock new levels of efficiency.</p>
+                    <p>Are repetitive, manual tasks slowing your team down and leading to costly errors? We harness the power of Artificial Intelligence to build custom bots and intelligent systems that automate your workflow, allowing your team to focus on what matters most.</p>
+                    
+                    <h3>What You Get:</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> In-depth workflow and process analysis.</li>
+                        <li><i class="fas fa-check-circle"></i> Custom bot development and deployment.</li>
+                        <li><i class="fas fa-check-circle"></i> Integration with your existing software.</li>
+                        <li><i class="fas fa-check-circle"></i> Ongoing performance monitoring and support.</li>
+                    </ul>
                 </div>
-
-                <div class="card" id="mobile" data-aos="zoom-in" data-aos-delay="350">
-                    <h3>Mobile Apps</h3>
-                    <p>Build elegant and high-performing mobile applications for Android and iOS with smooth user experiences.</p>
+                <div class="service-visual">
+                    <i class="fas fa-robot"></i>
                 </div>
             </div>
-        </div>
-    
-    </section>
-        </div>
-    
+        </section>
+
+        <section id="web" class="service-detail alt-background" data-aos="fade-up">
+            <div class="container service-detail-grid reverse-grid">
+                <div class="service-text">
+                    <h2>Web Development & Cloud Solutions</h2>
+                    <p class="service-subtitle">Build a powerful online presence with a secure, scalable, and high-performance website.</p>
+                    <p>Your website is your digital storefront. We create visually stunning, mobile-first websites that not only look great but are built on a solid foundation of clean code, modern cloud infrastructure, and SEO best practices to help you attract and convert customers.</p>
+                    
+                    <h3>What You Get:</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Custom responsive web design and development.</li>
+                        <li><i class="fas fa-check-circle"></i> Secure and scalable cloud hosting setup.</li>
+                        <li><i class="fas fa-check-circle"></i> Content Management System (CMS) integration.</li>
+                        <li><i class="fas fa-check-circle"></i> Foundational SEO to help you get discovered.</li>
+                    </ul>
+                </div>
+                <div class="service-visual">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="mobile" class="service-detail" data-aos="fade-up">
+            <div class="container service-detail-grid">
+                <div class="service-text">
+                    <h2>Mobile App Development</h2>
+                    <p class="service-subtitle">Engage your customers directly on the devices they use every day.</p>
+                    <p>Reach your audience and build brand loyalty with a high-performing, user-friendly mobile application for iOS and Android. From initial concept and UI/UX design to development and App Store submission, we manage the entire process.</p>
+                    
+                    <h3>What You Get:</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Native iOS and Android application development.</li>
+                        <li><i class="fas fa-check-circle"></i> Intuitive UI/UX design and prototyping.</li>
+                        <li><i class="fas fa-check-circle"></i> Rigorous testing across multiple devices.</li>
+                        <li><i class="fas fa-check-circle"></i> Full support with App Store & Google Play submission.</li>
+                    </ul>
+                </div>
+                <div class="service-visual">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta" data-aos="fade-up">
+            <div class="container">
+                <h2>Ready to Discuss Your Project?</h2>
+                <p>Let's turn your ideas into reality. Get in touch for a free, no-obligation consultation to see how we can help.</p>
+                <a href="contact.html" class="cta-btn">Schedule Your Consultation</a>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <p>&copy; 2025 LiSkyBot. All rights reserved.</p>
-    </footer>
+      <div class="footer-container">
+        <div class="footer-info">
+            <h3>LiSkyBot</h3>
+            <p>Innovating software for a Smarter Tomorrow.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-socials">
+            <h4>Follow Us</h4>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
     </div>
+    <div class="footer-bottom">
+        <p>© 2025 LiSkyBot. All Rights Reserved.</p>
+    </div>
+    </footer>
 
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>

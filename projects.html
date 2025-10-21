@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - LilySkyBot</title>
+    <title>Our Projects - LiSkyBot</title>
+    <meta name="description" content="See a selection of our successful projects in AI, IoT, and custom web development.">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/logos/logo.png">
 </head>
 <body>
-    <!-- Navbar -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="assets/logos/logo.png" alt="LilySkyBot Logo">
+                <img src="assets/logos/logo.png" alt="LiSkyBot Logo">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -25,7 +28,7 @@
                         <li><a href="services.html#mobile">Mobile Apps</a></li>
                     </ul>
                 </li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -37,38 +40,120 @@
         </nav>
     </header>
 
-    <!-- Projects Section -->
-    <section class="projects">
-        <div class="container">
-            <h2>Our Projects</h2>
-            <div class="project-cards">
-                <div class="project-card">
-                    <img src="assets/images/project1.jpg" alt="Project 1">
-                    <h3>Smart Turbine Monitor</h3>
-                    <p>IoT-based turbine speed monitoring and alarm simulation system.</p>
-                </div>
-                <div class="project-card">
-                    <img src="assets/images/project2.jpg" alt="Project 2">
-                    <h3>AI Resume Analyzer</h3>
-                    <p>AI-powered system to evaluate resumes and detect hiring bias.</p>
-                </div>
-                <div class="project-card">
-                    <img src="assets/images/project3.jpg" alt="Project 3">
-                    <h3>Spotify Playlist App</h3>
-                    <p>Interactive web app to create, manage, and share Spotify playlists.</p>
-                </div>
+    <main>
+        <section class="page-header" data-aos="fade-in">
+            <div class="container">
+                <h1>Our Work</h1>
+                <p>A selection of projects that showcase our skills, passion, and commitment to quality.</p>
             </div>
+        </section>
+
+        <div class="projects-container">
+
+            <article class="project-showcase" data-aos="fade-up">
+                <div class="container project-grid">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1621935359992-e2a2c8845b59?q=80&w=1000&auto=format&fit=crop" alt="Wind turbines in a field">
+                    </div>
+                    <div class="project-info">
+                        <h3>Industrial IoT Turbine Monitor</h3>
+                        <p class="project-problem">A leading energy provider needed a way to proactively monitor wind turbine performance to prevent costly, unexpected failures and optimize maintenance schedules.</p>
+                        <p class="project-solution">LiSkyBot developed a real-time, IoT-based monitoring system that tracks turbine speed, temperature, and vibrations. The system uses predictive analytics to flag potential issues and sends automated alerts to maintenance crews.</p>
+                        <div class="project-tags">
+                            <span>IoT</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Real-Time Data</span>
+                            <span>Alert System</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-showcase alt-background" data-aos="fade-up">
+                <div class="container project-grid reverse-grid">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=1000&auto=format&fit=crop" alt="People in a modern office during a job interview">
+                    </div>
+                    <div class="project-info">
+                        <h3>AI-Powered Fair Recruitment Platform</h3>
+                        <p class="project-problem">A major corporation was struggling with unconscious bias in their hiring process and spending thousands of hours manually screening resumes.</p>
+                        <p class="project-solution">We built an AI-powered platform that analyzes resumes for skills and experience while masking identifying information (like name and gender) to mitigate bias. The system ranks candidates based on job requirements, creating a fair and efficient shortlist.</p>
+                        <div class="project-tags">
+                            <span>Artificial Intelligence</span>
+                            <span>NLP</span>
+                            <span>Python</span>
+                            <span>React</span>
+                            <span>Bias Detection</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-showcase" data-aos="fade-up">
+                <div class="container project-grid">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1511302211874-9a8a6a68f3b0?q=80&w=1000&auto=format&fit=crop" alt="Person listening to music with headphones">
+                    </div>
+                    <div class="project-info">
+                        <h3>Dynamic Music Discovery App</h3>
+                        <p class="project-problem">A music startup wanted to create a more engaging way for users to discover and share music beyond standard, static playlisting.</p>
+                        <p class="project-solution">We developed an interactive web application using the Spotify API that allows users to create dynamic playlists based on mood, genre, and activity. It features a clean user interface and seamless social sharing capabilities.</p>
+                        <div class="project-tags">
+                            <span>Spotify API</span>
+                            <span>JavaScript</span>
+                            <span>Web App</span>
+                            <span>User Authentication</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
         </div>
-    </section>
-    <!-- Footer -->
-     <footer>
-  <div class="footer-bottom">
-    &copy; 2025 LiSkyBot Company. All rights reserved.
-  </div>
-</footer>
 
+        <section class="final-cta" data-aos="fade-up">
+            <div class="container">
+                <h2>Have a Project in Mind?</h2>
+                <p>Let's turn your vision into a reality. We are always excited to tackle new challenges and build amazing things.</p>
+                <a href="contact.html" class="cta-btn">Let's Build It Together</a>
+            </div>
+        </section>
+    </main>
 
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-info">
+            <h3>LiSkyBot</h3>
+            <p>Innovating software for a Smarter Tomorrow.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-socials">
+            <h4>Follow Us</h4>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 LiSkyBot. All Rights Reserved.</p>
+    </div>
+    </footer>
 
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

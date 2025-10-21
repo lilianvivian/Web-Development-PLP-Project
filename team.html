@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team - LilySkyBot</title>
+    <title>Our Team - LiSkyBot</title>
+    <meta name="description" content="Meet the passionate team of developers, designers, and AI specialists at LiSkyBot.">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/logos/logo.png">
 </head>
 <body>
-    <!-- Navbar -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="assets/logos/logo.png" alt="LilySkyBot Logo">
+                <img src="assets/logos/logo.png" alt="LiSkyBot Logo">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="team.html">Team</a></li>
+                <li><a href="team.html" class="active">Team</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -30,41 +33,91 @@
         </nav>
     </header>
 
-    <!-- Team Section -->
-    <section class="team">
-        <div class="container">
-            <h2>Meet Our Team</h2>
-            <div class="team-cards">
-                <div class="team-card">
-                    <img src="assets/images/team1.jpg" alt="Team Member 1">
-                    <h3>Lilian Vivian</h3>
-                    <p>Founder & CEO</p>
+    <main>
+        <section class="page-header" data-aos="fade-in">
+            <div class="container">
+                <h1>The Minds Behind the Mission</h1>
+                <p>We are a small but mighty team of innovators, thinkers, and builders.</p>
+            </div>
+        </section>
+
+        <section class="founder-section" data-aos="fade-up">
+            <div class="container founder-grid">
+                <div class="founder-image">
+                    <img src="assets/images/team1.jpg" alt="Lilian Vivian, Founder & CEO">
                 </div>
-                <div class="team-card">
-                    <img src="assets/images/team2.jpg" alt="Team Member 2">
-                    <h3>Nice Bliss</h3>
-                    <p>Lead Developer</p>
-                </div>
-                <div class="team-card">
-                    <img src="assets/images/team3.jpg" alt="Team Member 3">
-                    <h3>Henry Harrisson</h3>
-                    <p>AI Specialist</p>
-                </div>
-                <div class="team-card">
-                    <img src="assets/images/team4.jpg" alt="Team Member 4">
-                    <h3>Grace Ashton</h3>
-                    <p>UI/UX Designer</p>
+                <div class="founder-bio">
+                    <h2>A Word From Our Founder</h2>
+                    <h3>Lilian Vivian, Founder & CEO</h3>
+                    <p>“I started LiSkyBot with a clear vision: to democratize access to high-end technology for businesses here in Kenya. Seeing our clients succeed using the solutions we build is the greatest reward. My goal is to lead a team that is not only technically excellent but also deeply committed to our clients' growth and success.”</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-  <div class="footer-bottom">
-    &copy; 2025 LiSkyBot Company. All rights reserved.
-  </div>
-</footer>
+        <section class="team-experts alt-background" data-aos="fade-up">
+            <div class="container">
+                <h2>Meet Our Experts</h2>
+                <div class="team-grid">
+                    <div class="expert-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="assets/images/team2.jpg" alt="Nice Bliss">
+                        <h3>Nice Bliss</h3>
+                        <p class="role">Lead Developer</p>
+                        <p class="bio">With over a decade of experience, Nice is the architectural mastermind behind our most complex projects.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="expert-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="assets/images/team3.jpg" alt="Henry Harrisson">
+                        <h3>Henry Harrisson</h3>
+                        <p class="role">AI Specialist</p>
+                        <p class="bio">Henry lives on the cutting edge of machine learning, turning complex data into actionable, intelligent solutions.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="expert-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="assets/images/team4.jpg" alt="Grace Ashton">
+                        <h3>Grace Ashton</h3>
+                        <p class="role">UI/UX Designer</p>
+                        <p class="bio">Grace is the creative heart of our team, dedicated to crafting beautiful, intuitive, and user-friendly experiences.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta" data-aos="fade-up">
+            <div class="container">
+                <h2>Want to Join Our Team?</h2>
+                <p>We are always looking for passionate and talented individuals to join us on our mission. See our open positions.</p>
+                <a href="contact.html" class="cta-btn">View Careers</a> </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        </div>
+      <div class="footer-bottom">
+        <p>© 2025 LiSkyBot. All Rights Reserved.</p>
+      </div>
+    </footer>
 
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

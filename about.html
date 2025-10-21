@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - LilySkyBot</title>
+    <title>About LiSkyBot - Our Story & Values</title>
+    <meta name="description" content="Learn about LiSkyBot's mission to empower Kenyan businesses through innovative AI and software solutions.">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/logos/logo.png">
 </head>
 <body>
-    <!-- Navbar -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="assets/logos/logo.png" alt="LilySkyBot Logo">
+                <img src="assets/logos/logo.png" alt="LiSkyBot Logo">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li class="dropdown">
                     <a href="services.html" class="dropbtn">Services</a>
                     <ul class="dropdown-content">
@@ -37,25 +40,106 @@
         </nav>
     </header>
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <h2>About LiSkyBot</h2>
-            <p>Welcome to <strong>LiSkyBot</strong>! Our Company can bring digital solutions to every person, home and organization for a fully connected, intelligent world. We specialize in delivering innovative solutions that help businesses grow.</p>
+    <main>
+        <section class="page-header" data-aos="fade-in">
+            <div class="container">
+                <h1>About LiSkyBot</h1>
+                <p>We are a passionate team dedicated to building intelligent solutions for a smarter future.</p>
+            </div>
+        </section>
 
-            <h3>Our Mission</h3>
-            <p class="highlight">To provide high-quality software and AI solutions that drive business success and foster innovation.</p>
-            
-            <h3>Our Vision</h3>
-            <p class="highlight">To be a leading technology company recognized for excellence and innovative solutions worldwide.</p>
+        <section class="about-story" data-aos="fade-up">
+            <div class="container about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop" alt="A team collaborating in a modern office">
+                </div>
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>LiSkyBot was born from a simple idea: that the transformative power of AI and custom software shouldn't be reserved for large global corporations. Founded in Juja, we saw an opportunity to bring cutting-edge digital solutions to the vibrant and growing business community here in Kenya.</p>
+                    <p>We believe in building more than just software; we build partnerships. Our mission is to understand your unique challenges and create tailored solutions that not only solve problems but also unlock new opportunities for growth and innovation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="core-values alt-background" data-aos="fade-up">
+            <div class="container">
+                <h2>Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-lightbulb value-icon"></i>
+                        <h3>Innovation</h3>
+                        <p>We are relentlessly curious, constantly exploring new technologies and creative approaches to solve complex problems.</p>
+                    </div>
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-hands-helping value-icon"></i>
+                        <h3>Partnership</h3>
+                        <p>Your success is our success. We work collaboratively with our clients, building strong relationships based on trust and transparency.</p>
+                    </div>
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-medal value-icon"></i>
+                        <h3>Quality</h3>
+                        <p>We are committed to the highest standards of excellence in every line of code we write and every project we deliver.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose-us" data-aos="fade-up">
+            <div class="container">
+                <h2>Why Choose Us?</h2>
+                <div class="reasons-grid">
+                    <div class="reason">
+                        <i class="fas fa-bullseye reason-icon"></i>
+                        <p><strong>Tailored Solutions:</strong> We don't use one-size-fits-all templates. Every project is custom-built for your specific needs.</p>
+                    </div>
+                    <div class="reason">
+                        <i class="fas fa-users reason-icon"></i>
+                        <p><strong>Local Expertise:</strong> As a Kenyan company, we understand the local market and the unique challenges your business faces.</p>
+                    </div>
+                    <div class="reason">
+                        <i class="fas fa-chart-line reason-icon"></i>
+                        <p><strong>Focus on Results:</strong> We are driven by delivering measurable results that positively impact your bottom line.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-info">
+            <h3>LiSkyBot</h3>
+            <p>Innovating software for a Smarter Tomorrow.</p>
         </div>
-    </section>
-    <footer>
-  <div class="footer-bottom">
-    &copy; 2025 LiSkyBot Company. All rights reserved.
-  </div>
-</footer>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-socials">
+            <h4>Follow Us</h4>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 LiSkyBot. All Rights Reserved.</p>
+    </div>
+    </footer>
 
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>

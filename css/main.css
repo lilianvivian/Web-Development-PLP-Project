@@ -51,7 +51,7 @@ header {
 
 /* Hamburger */
 .hamburger {
-    display: none;
+    display: block;
     flex-direction: column;
     cursor: pointer;
 }
@@ -63,6 +63,167 @@ header {
     border-radius: 2px;
 }
 
+/* =========================================
+   NEW STYLES FOR LiSkyBot HOMEPAGE
+   You can add this to the bottom of your css/main.css file
+   ========================================= */
+
+/* --- 1. Root Variables (for easy theme changes) --- */
+:root {
+    --primary-color: #4A90E2; /* A modern, friendly blue */
+    --secondary-color: #333; /* Dark text color */
+    --background-light: #FFFFFF; /* White */
+    --background-grey: #f8f9fa; /* A very light grey for sections */
+    --font-main: 'Poppins', sans-serif; /* Recommended: Add this font from Google Fonts */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* --- 2. Global Styles --- */
+body {
+    font-family: var(--font-main);
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* --- 3. Hero Section Enhancements --- */
+.hero {
+    min-height: 80vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* --- 4. General Button Styles (for .cta-btn) --- */
+.cta-btn {
+    background-color: var(--primary-color);
+    color: var(--background-light);
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #357ABD;/
+}
+
+
+/* --- 5. New Section Styling --- */
+.about-intro, .services-overview, .final-cta {
+    padding: 60px 0;
+}
+
+/* About Intro Section */
+.about-intro {
+    background-color: var(--background-grey);
+    text-align: center;
+}
+
+.about-intro p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Services Overview Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive Grid */
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--background-light);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.learn-more-btn:hover {
+    text-decoration: underline;
+}
+
+/* Final CTA Section */
+.final-cta {
+    background-color: var(--primary-color);
+    color: var(--background-light);
+    text-align: center;
+}
+
+.final-cta h2 {
+    color: var(--background-light);
+}
+
+
+/* --- 6. Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+}
 /* Hero Section */
 .hero {
     background: url('../assets/images/hero.jpg') no-repeat center center/cover;
@@ -103,7 +264,7 @@ header {
         position: absolute;
         top: 70px;
         left: 0;
-        width: 100%;
+        width: 50%;
         flex-direction: column;
         background: #800000;
     }
@@ -125,7 +286,7 @@ header {
         color: #fff;
     }
     /* Active link color */
-    .navbar .nav-links a.active {
+    .navbar .nav-links a.current-page {
         background: #fff;
         color: #800000;
         font-weight: 600;
@@ -153,7 +314,7 @@ header {
     }
 
     .hamburger.active span {
-        background: #fff; /* Turns white when active */
+        background: #fff; 
     }
 }
     .hamburger {
@@ -187,483 +348,640 @@ header {
     }
 
 
-.team-grid {
+/* =========================================
+   NEW STYLES FOR DETAILED ABOUT PAGE
+   (Consistent with the dark theme)
+   ========================================= */
+
+/* --- 1. About Story Section --- */
+.about-story {
+    padding: 80px 0;
+    background-color: var(--background-dark1);
+    color: var(--text-light);
+}
+
+.about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-.team-member {
-    text-align: center;
-    padding: 1rem;
-    background: #887fc8;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-.team-member:hover {
-    transform: translateY(-5px);
-}
-.team-member img {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    margin-bottom: 1rem;
-}
-.contact form {
-    max-width: 600px;
-    margin: 2rem auto;
-    background: #949090;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-.contact .form-group {
-    margin-bottom: 1rem;
-}
-.contact label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-.contact input, .contact textarea {
-    width: 100%;
-    padding: 0.7rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.contact p,
-.contact h2 {
-    color: #111; /* darker text for readability */
-}
-/* About Section */
-.about {
-    min-height: 90vh;
-    background: url('../assets/images/about-bg.png') no-repeat center center;
-    background-size: cover;
-    display: flex;
+    grid-template-columns: 1fr 1.2fr; /* Image is slightly smaller than text */
     align-items: center;
-    justify-content: center;
-    padding: 4rem 2rem;
-    text-align: center;
-    color: #fff;
-    position: relative;
+    gap: 60px;
 }
 
-/* Optional dark overlay for readability */
-.about::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.about .container {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-}
-
-.about h2 {
+.about-text h2 {
     font-size: 2.5rem;
+    text-align: left;
     margin-bottom: 1.5rem;
 }
 
-.about h3 {
-    font-size: 1.8rem;
-    margin-top: 2rem;
-}
-
-.about p {
-    font-size: 1.1rem;
+.about-text p {
     line-height: 1.8;
     margin-bottom: 1rem;
+    color: var(--text-muted);
 }
 
-/* Mission & Vision italics */
-.about .highlight {
-    font-style: italic;
-    font-weight: 500;
-}
-/* 🌌 Services Section */
-.services {
-    min-height: 100vh;
-    background: url('../assets/images/services-bg.png') no-repeat center center / cover;
-    position: relative;
-    padding: 5rem 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #342393;
+
+/* --- 2. Core Values Section --- */
+.core-values {
+    padding: 80px 0;
+    background-color: var(--background-dark2);
     text-align: center;
-    overflow: hidden;
+}
+.core-values h2 {
+    color: var(--text-light);
 }
 
-/* ✨ Soft overlay for readability */
-.services::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    z-index: 1;
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 3rem;
 }
 
-/* Content Container */
-.services .container {
-    position: relative;
-    z-index: 2;
-    max-width: 1100px;
-    width: 100%;
+.value-card {
+    background-color: var(--background-dark1);
+    padding: 40px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-/* Heading */
-.services h2 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
     margin-bottom: 1rem;
-    background: linear-gradient(90deg, #9a8cff, #7f7bff, #9f9fff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
-.services p.subtitle {
-    font-size: 1.2rem;
-    font-style: italic;
-    opacity: 0.9;
-    margin-bottom: 3rem;
-}
-
-/* 🌠 Service Cards Layout */
-.service-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.5rem;
-}
-
-/* Glassmorphism Cards */
-.card {
-    background: rgba(92, 6, 6, 0.12);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 2.2rem 1.5rem;
-    width: 300px;
-    transition: all 0.35s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    border: 1px solid rgba(255,255,255,0.2);
-}
-
-/* Titles inside cards */
-.card h3 {
+.value-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #0c0a0a;
-}
-
-/* Paragraph text */
-.card p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #2f2626;
-}
-
-/* ✨ Hover Effects */
-.card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 8px 25px rgba(219, 210, 210, 0.2);
-    border-color: rgba(230, 13, 13, 0.4);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .services {
-        padding: 4rem 1.5rem;
-    }
-
-    .services h2 {
-        font-size: 2.2rem;
-    }
-
-    .service-cards {
-        gap: 1.5rem;
-    }
-
-    .card {
-        width: 90%;
-        padding: 1.8rem;
-    }
-}
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-.page-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.content {
-    flex: 1; /* main content pushes footer down */
-}
-
-
-
-/* Projects Section */
-.projects {
-    min-height: 90vh;
-    background: linear-gradient(to right, #202080, #e09191);
-    padding: 4rem 2rem;
-    text-align: center;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Container */
-.projects .container {
-    max-width: 1000px;
-    width: 100%;
-}
-
-/* Heading */
-.projects h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    font-weight: 700;
-}
-
-/* Project Cards Grid */
-.project-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-/* Individual Card */
-.project-card {
-    background-color: #beb5b5;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.project-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.project-card h3 {
-    margin: 1rem 0 0.5rem;
-    font-size: 1.3rem;
-}
-
-.project-card p {
-    padding: 0 1rem 1rem;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* Hover Animation */
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(120, 16, 16, 0.2);
-}
-
-/* Team Section */
-.team {
-    min-height: 90vh;
-    background: linear-gradient(to right, #202080, #e09191);
-    padding: 4rem 2rem;
-    text-align: center;
-    color: #201313;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.team .container {
-    max-width: 1000px;
-    width: 100%;
-}
-
-.team h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-/* Team Cards Grid */
-.team-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-}
-
-.team-card {
-    background-color: rgba(121, 12, 12, 0.15);
-    backdrop-filter: blur(6px);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.team-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.team-card h3 {
-    margin-top: 1rem;
-    font-size: 1.3rem;
-}
-
-.team-card p {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Hover Effect */
-.team-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(87, 16, 16, 0.2);
-}
-
-/* Contact Section */
-.contact {
-    min-height: 90vh;
-    background: linear-gradient(to right, #2b197f, #ac6b6b);
-    padding: 4rem 2rem;
-    text-align: center;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact .container {
-    max-width: 600px;
-    width: 100%;
-}
-
-.contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.contact p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-}
-
-/* Contact Info */
-.contact-info {
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-}
-
-/* Form Styling */
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contact input,
-.contact textarea,
-.contact select {
-    padding: 0.8rem 1rem;
-    border-radius: 8px;
-    border: none;
-    font-size: 1rem;
-    width: 100%;
-}
-
-.contact button {
-    padding: 0.8rem 1rem;
-    border-radius: 8px;
-    border: none;
-    background-color: #fff;
-    color: #741212;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.contact button:hover {
-    background-color: #eee;
-}
-
-/* Success Popup */
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 200;
-    animation: fadeIn 0.4s ease;
-}
-
-.popup-content {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    width: 320px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    animation: slideUp 0.3s ease;
-}
-
-.popup-content h3 {
-    color: #800000;
+    color: var(--text-light);
     margin-bottom: 0.5rem;
 }
 
-.popup-content p {
-    font-size: 0.95rem;
+.value-card p {
+    color: var(--text-muted);
+}
+
+
+/* --- 3. Why Choose Us Section --- */
+.why-choose-us {
+    padding: 80px 0;
+    background-color: var(--background-dark1);
+}
+.why-choose-us h2 {
+    color: var(--text-light);
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 3rem;
+}
+
+.reason {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.reason-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+.reason p {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.reason p strong {
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+
+/* --- 4. Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* Stack columns on mobile */
+    }
+
+    .about-text h2 {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+/* =========================================
+   NEW STYLES FOR DETAILED SERVICES PAGE
+   ========================================= */
+
+/* --- 1. Root Variables (Dark Theme) --- */
+:root {
+    --primary-color: #4A90E2; /* Same blue as homepage for consistency */
+    --background-dark1: #1a1a2e; /* Deep space blue */
+    --background-dark2: #2a2a4e; /* Slightly lighter blue */
+    --text-light: #f4f4f4;       /* Light text for dark backgrounds */
+    --text-muted: #a9a9d4;       /* Muted text for subtitles */
+    --font-main: 'Poppins', sans-serif;
+}
+
+/* --- 2. Page Header (The intro at the top) --- */
+.page-header {
+    background-color: var(--background-dark1);
+    color: var(--text-light);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* --- 3. Service Detail Sections (The core content) --- */
+.service-detail {
+    padding: 80px 0;
+    background-color: var(--background-dark1);
+    color: var(--text-light);
+}
+
+.service-detail.alt-background {
+    background-color: var(--background-dark2);
+}
+
+.service-detail-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Text column is slightly wider */
+    align-items: center;
+    gap: 60px;
+}
+
+.service-text h2 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.service-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.service-text h3 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+.service-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-text ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+}
+
+.service-text ul li .fa-check-circle {
+    color: var(--primary-color);
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+/* The visual column with the large icon */
+.service-visual {
+    text-align: center;
+    font-size: 10rem; 
+    color: var(--primary-color);
+    opacity: 0.2; 
+}
+
+
+/* --- 4. Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    .service-detail-grid {
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+
+    .service-text h2 {
+        text-align: center;
+    }
+
+    /* Reverse the order so text is always first on mobile */
+    .service-detail-grid.reverse-grid {
+        grid-template-areas: "text" "visual";
+    }
+    .service-detail-grid .service-text { grid-area: text; }
+    .service-detail-grid .service-visual { grid-area: visual; }
+
+    .service-visual {
+        font-size: 7rem;
+        margin-top: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* =========================================
+   NEW STYLES FOR DETAILED PROJECTS PAGE
+   (Designed to be consistent with the services page)
+   ========================================= */
+
+/* --- 1. General Project Section Styles --- */
+
+.project-showcase {
+    padding: 80px 0;
+    background-color: var(--background-dark1);
+    color: var(--text-light);
+    border-bottom: 1px solid #3a3a5a; /* Separator line between projects */
+}
+
+.project-showcase.alt-background {
+    background-color: var(--background-dark2);
+}
+
+/* --- 2. Two-Column Project Grid --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Image column is slightly smaller */
+    align-items: center;
+    gap: 60px;
+}
+
+/* Class to reverse the grid layout for alternating effect */
+.project-grid.reverse-grid {
+    grid-template-columns: 1.2fr 1fr;
+}
+
+.project-grid.reverse-grid .project-image {
+    order: 2; /* Flips the order of items */
+}
+.project-grid.reverse-grid .project-info {
+    order: 1;
+}
+
+/* --- 3. Project Visuals & Info --- */
+.project-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.project-image img:hover {
+    transform: scale(1.03);
+}
+
+.project-info h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.project-problem {
+    font-style: italic;
+    color: var(--text-muted);
+    border-left: 3px solid var(--primary-color);
+    padding-left: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.project-solution {
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* --- 4. Tech Stack Tags --- */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-tags span {
+    background-color: rgba(74, 144, 226, 0.2); /* A transparent version of the primary color */
+    color: var(--primary-color);
+    padding: 5px 15px;
+    border-radius: 20px; /* Pill shape */
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+/* --- 5. Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    .project-grid,
+    .project-grid.reverse-grid {
+        grid-template-columns: 1fr; /* Stack columns on mobile */
+        text-align: center;
+    }
+
+    .project-grid.reverse-grid .project-image {
+        order: 1; /* Reset order for mobile */
+    }
+    .project-grid.reverse-grid .project-info {
+        order: 2;
+    }
+
+    .project-info h3 {
+        font-size: 1.8rem;
+    }
+
+    .project-problem {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .project-tags {
+        justify-content: center;
+    }
+}
+
+/* =========================================
+   NEW STYLES FOR DETAILED TEAM PAGE
+   ========================================= */
+
+/* --- 1. Founder's Section --- */
+.founder-section {
+    padding: 80px 0;
+    background-color: var(--background-dark1);
+    color: var(--text-light);
+}
+
+.founder-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Image is smaller than the bio */
+    align-items: center;
+    gap: 60px;
+}
+
+.founder-image img {
+    width: 100%;
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 0 0 30px rgba(74, 144, 226, 0.2);
+}
+
+.founder-bio h2 {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    text-align: left;
+}
+
+.founder-bio h3 {
+    font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
-.popup-content button {
-    background: #800000;
-    color: #fff;
+.founder-bio p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+
+/* --- 2. Team Experts Section --- */
+.team-experts {
+    padding: 80px 0;
+    background-color: var(--background-dark2);
+}
+.team-experts h2 {
+    color: var(--text-light);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 3rem;
+}
+
+.expert-card {
+    background-color: var(--background-dark1);
+    border-radius: 8px;
+    text-align: center;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.expert-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 4px solid var(--primary-color);
+}
+
+.expert-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-light);
+}
+
+.expert-card .role {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.expert-card .bio {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+
+/* --- 3. Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    .founder-grid {
+        grid-template-columns: 1fr; /* Stack on mobile */
+        text-align: center;
+    }
+
+    .founder-image {
+        margin-bottom: 2rem;
+    }
+    
+    .founder-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .founder-bio h2, .founder-bio h3 {
+        text-align: center;
+    }
+}
+
+/* =========================================
+   FINAL STYLES FOR DETAILED CONTACT PAGE
+   ========================================= */
+
+/* --- 1. Main Contact Section Layout --- */
+.contact-section {
+    padding: 80px 0;
+    background-color: var(--background-dark1);
+    color: var(--text-light);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Info column is smaller than form */
+    gap: 60px;
+    align-items: flex-start;
+}
+
+
+/* --- 2. Contact Details (Left Column) --- */
+.contact-details h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-details p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.info-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.info-block i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+.info-block strong {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+
+/* --- 3. Contact Form (Right Column) --- */
+.contact-form-container {
+    background-color: var(--background-dark2);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.contact-form-container h3 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #4a4a70;
+    background-color: var(--background-dark1);
+    border-radius: 5px;
+    color: var(--text-light);
+    font-size: 1rem;
+    font-family: var(--font-main);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* The submit button reuses the .cta-btn style from the homepage */
+.contact-form-container .cta-btn {
+    width: 100%;
     border: none;
-    padding: 0.6rem 1.5rem;
-    border-radius: 6px;
+    font-size: 1.1rem;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
-.popup-content button:hover {
-    background: #a00000;
+
+/* --- 4. Map Section --- */
+.map-section {
+    /* The iframe handles its own styling, this is just a wrapper */
+    line-height: 0; /* Removes any whitespace below the map */
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
 
-@keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+/* --- 5. Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack columns on mobile */
+    }
+
+    .contact-details {
+        text-align: center;
+    }
+
+    .info-block {
+        justify-content: center;
+        text-align: left;
+    }
 }
 /* Footer Styling */
 footer {

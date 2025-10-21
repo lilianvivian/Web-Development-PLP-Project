@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - LiSkyBot</title>
+    <title>Contact Us - LiSkyBot</title>
+    <meta name="description" content="Get in touch with the LiSkyBot team to discuss your project. We're based in Juja, Kenya.">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/logos/logo.png">
 </head>
 <body>
-    <!-- Navbar -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="assets/logos/logo.png" alt="LilySkyBot Logo">
+                <img src="assets/logos/logo.png" alt="LiSkyBot Logo">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -20,7 +23,7 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -30,49 +33,102 @@
         </nav>
     </header>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <div class="container">
-            <h2>Get in Touch with LiSkyBot</h2>
-            <p>Talk to us via phone, email, or submit your request below!</p>
-
-            <!-- Contact Info -->
-            <div class="contact-info">
-                <p><strong>Phone:</strong> +254 768 951 560</p>
-                <p><strong>Email:</strong> info@liskybot.com</p>
+    <main>
+        <section class="page-header" data-aos="fade-in">
+            <div class="container">
+                <h1>Get in Touch</h1>
+                <p>We're here to answer your questions and help you get started on your next project.</p>
             </div>
+        </section>
 
-            <!-- Contact Form -->
-            <form action="#" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                
-                <select name="service" required>
-                    <option value="">Select Service Category</option>
-                    <option value="web">Web Development</option>
-                    <option value="ai">AI Solutions</option>
-                    <option value="mobile">Mobile Apps</option>
-                </select>
-                
-                <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+        <section class="contact-section" data-aos="fade-up">
+            <div class="container contact-grid">
+                <div class="contact-details">
+                    <h3>Contact Information</h3>
+                    <p>Fill out the form, or reach out to us directly through one of the channels below. We look forward to hearing from you!</p>
+                    
+                    <div class="info-block">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Our Office</strong>
+                            <p>Juja Town, Kiambu County, Kenya</p>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email Us</strong>
+                            <p>info@liskybot.com</p>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Call Us</strong>
+                            <p>+254 768 951 560</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h3>Send Us a Message</h3>
+                    <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service of Interest</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Select a Service</option>
+                                <option value="AI & Automation">AI & Automation</option>
+                                <option value="Web Development & Cloud">Web Development & Cloud</option>
+                                <option value="Mobile Apps">Mobile Apps</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31913.34444018884!2d37.0055242589882!3d-1.1065162153093902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4655436638a1%3A0x7372a57c5053e8b!2sJuja!5e0!3m2!1sen!2ske!4v1668543456789!5m2!1sen!2ske" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
         </div>
-    </section>
-    <!-- Footer -->
-     <footer class="footer">
-        <p>&copy; 2025 LiSkyBot. All rights reserved.</p>
+      <div class="footer-bottom">
+        <p>© 2025 LiSkyBot. All Rights Reserved.</p>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>
-    <!-- Success Popup -->
-<div id="success-popup" class="popup">
-    <div class="popup-content">
-        <h3>✅ Message Sent!</h3>
-        <p>Thanks for contacting <strong>LiSkyBot</strong>. We'll get back to you soon.</p>
-        <button id="close-popup">OK</button>
-    </div>
-</div>
-
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 </html>
