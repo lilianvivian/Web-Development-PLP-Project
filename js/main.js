@@ -55,13 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     'Accept': 'application/json'
                 }
             }).then(data => {
-    // We know the submission works (from your chart),
-    // so we will ALWAYS show the success popup.
+   
     popup.style.display = "flex";
     contactForm.reset();
 }).catch(error => {
-    // Even if a CORS error happens (which it is),
-    // we will STILL show the success popup.
+    
     popup.style.display = "flex";
     contactForm.reset();
 });
