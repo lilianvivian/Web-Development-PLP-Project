@@ -127,5 +127,236 @@
             once: true      // Animate only once per scroll
         });
     </script>
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+  /* 1. THE FLOATING BUTTON */
+  .liskybot-toggler {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(135deg, #0056D2, #003C9D);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 86, 210, 0.4);
+    z-index: 99999;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .liskybot-toggler:hover { transform: scale(1.05) translateY(-2px); }
+  .liskybot-icon { width: 30px; height: 30px; fill: white; }
+
+  /* 2. THE CHAT WINDOW */
+  .liskybot-window {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 380px;
+    height: 600px;
+    max-height: 80vh; /* Prevents it from being too tall on small screens */
+    background-color: #0A192F; /* Brand Dark Navy */
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    z-index: 99999;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid #172A45;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .liskybot-window.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* 3. HEADER */
+  .liskybot-header {
+    background: linear-gradient(135deg, #0056D2, #003C9D);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #172A45;
+  }
+  .lisky-profile { display: flex; align-items: center; gap: 12px; }
+  .lisky-avatar { 
+    width: 40px; height: 40px; background: white; border-radius: 50%; 
+    display: flex; align-items: center; justify-content: center; font-size: 24px;
+  }
+  .lisky-info h4 { margin: 0; color: white; font-size: 16px; font-weight: 600; }
+  .lisky-info p { margin: 0; color: rgba(255,255,255,0.8); font-size: 12px; }
+  .lisky-close { color: white; cursor: pointer; font-size: 24px; opacity: 0.8; background: none; border: none; }
+
+  /* 4. MESSAGES AREA */
+  .liskybot-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #0A192F;
+  }
+
+  /* 5. INPUT AREA */
+  .liskybot-input-area {
+    padding: 15px;
+    background-color: #0A192F;
+    border-top: 1px solid #172A45;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .liskybot-input-area input {
+    flex: 1;
+    padding: 14px;
+    border-radius: 25px;
+    border: 1px solid #172A45;
+    background: #112240;
+    color: white;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+  }
+  .liskybot-input-area input::placeholder { color: #8892b0; }
+  .liskybot-input-area input:focus { border-color: #0056D2; }
+  
+  .lisky-send-btn {
+    background-color: #0056D2;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .lisky-send-btn:hover { background-color: #0044a5; }
+
+  /* BUBBLES */
+  .msg { padding: 12px 16px; border-radius: 12px; max-width: 85%; font-size: 14px; line-height: 1.5; animation: fadeIn 0.3s ease; }
+  .bot-msg { background-color: #172A45; color: #e6f1ff; align-self: flex-start; border-bottom-left-radius: 2px; }
+  .user-msg { background-color: #0056D2; color: white; align-self: flex-end; border-bottom-right-radius: 2px; }
+  
+  /* MARKDOWN STYLES */
+  .msg strong { font-weight: 700; color: #fff; }
+  .msg ul { margin: 5px 0; padding-left: 20px; }
+  .msg li { margin-bottom: 4px; }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+
+<button class="liskybot-toggler" onclick="toggleChat()">
+  <svg class="liskybot-icon" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+</button>
+
+<div class="liskybot-window" id="liskyChatWindow">
+  <div class="liskybot-header">
+    <div class="lisky-profile">
+      <div class="lisky-avatar">🤖</div>
+      <div class="lisky-info">
+        <h4>Lisky Support</h4>
+        <p>Typically replies instantly</p>
+      </div>
+    </div>
+    <button class="lisky-close" onclick="toggleChat()">×</button>
+  </div>
+  
+  <div class="liskybot-messages" id="chatMessages">
+    <div class="msg bot-msg">Hello! I am Lisky. 👋<br><br>I can help you with Pricing, Services, or Technical Support. What do you need?</div>
+  </div>
+
+  <div class="liskybot-input-area">
+    <input type="text" id="userInput" placeholder="Type your question..." onkeypress="handleEnter(event)">
+    <button class="lisky-send-btn" onclick="sendMessage()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  // *** PASTE YOUR NGROK LINK HERE ***
+  const API_URL = "https://kickless-bernarda-lushier.ngrok-free.dev/chat"; 
+                   
+
+  function toggleChat() {
+    const window = document.getElementById('liskyChatWindow');
+    if (window.style.display === 'none' || window.style.display === '') {
+      window.style.display = 'flex';
+      setTimeout(() => window.classList.add('active'), 10);
+    } else {
+      window.classList.remove('active');
+      setTimeout(() => window.style.display = 'none', 300);
+    }
+  }
+
+  function handleEnter(e) {
+    if (e.key === 'Enter') sendMessage();
+  }
+
+  // --- THE MAGIC FORMATTER (Fixes Asterisks) ---
+  function formatMessage(text) {
+    // 1. Convert **bold** to <strong>bold</strong>
+    let formatted = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    // 2. Convert *italic* to <em>italic</em>
+    formatted = formatted.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    // 3. Convert newlines to <br>
+    formatted = formatted.replace(/\n/g, '<br>');
+    // 4. Convert bullet points
+    formatted = formatted.replace(/- (.*?)(<br>|$)/g, '• $1$2');
+    return formatted;
+  }
+
+  async function sendMessage() {
+    const input = document.getElementById('userInput');
+    const text = input.value.trim();
+    if (!text) return;
+
+    addMessage(text, 'user-msg');
+    input.value = '';
+
+    const loadingDiv = addMessage("Thinking...", 'bot-msg');
+
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: text })
+      });
+      
+      const data = await response.json();
+      
+      // Apply the formatting fix
+      loadingDiv.innerHTML = formatMessage(data.reply);
+      
+    } catch (error) {
+      loadingDiv.innerText = "Error: Lisky is offline. (Check Server)";
+    }
+  }
+
+  function addMessage(text, className) {
+    const div = document.createElement('div');
+    div.className = `msg ${className}`;
+    // If it's the user, no formatting needed. If bot, it will be formatted later.
+    div.innerHTML = text; 
+    document.getElementById('chatMessages').appendChild(div);
+    const container = document.getElementById('chatMessages');
+    container.scrollTop = container.scrollHeight;
+    return div;
+  }
+</script>
+    
 </body>
 </html>
